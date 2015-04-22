@@ -13,5 +13,9 @@ describe('String#scrabble_score') do
   it("converts input to lowercase") do
     expect(("Hello").scrabble_score()).to(eq(8))
   end
+
+  it("supports muiltiple word scores") do
+    expect(("Hello World").scrabble_score()).to(eq(17))
+  end
   
 end
