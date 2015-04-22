@@ -1,5 +1,6 @@
 require('rspec')
 require('scrabble_score')
+require('pry')
 
 describe('String#scrabble_score') do
   it("returns a scrabble score for a letter") do
@@ -20,6 +21,10 @@ describe('String#scrabble_score') do
 
   it("ignores non letter characters") do
     expect(("Hello World!").scrabble_score()).to(eq(17))
+  end
+
+  it("returns 0 when no valid characters entered") do
+    expect(("123").scrabble_score()).to(eq(0))
   end
   
 end

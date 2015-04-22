@@ -24,7 +24,12 @@ class String
   end
 
 
-  return (word_value_array).reduce(:+)
+  if (word_value_array.reduce(:+)).eql?(nil)
+
+    return 0
+  else
+     return word_value_array.reduce(:+)
+  end
 
   end
 end
