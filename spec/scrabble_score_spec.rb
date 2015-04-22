@@ -17,5 +17,9 @@ describe('String#scrabble_score') do
   it("supports muiltiple word scores") do
     expect(("Hello World").scrabble_score()).to(eq(17))
   end
+
+  it("ignores non letter characters") do
+    expect(("Hello World!").scrabble_score()).to(eq(17))
+  end
   
 end
